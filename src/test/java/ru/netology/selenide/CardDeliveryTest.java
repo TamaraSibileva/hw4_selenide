@@ -25,7 +25,7 @@ public class CardDeliveryTest {
         Selenide.open("http://localhost:9999");
         $("[data-test-id='city'] input").setValue("Кемерово");
         String planningDay = generateDate(5, "dd.MM.yyyy");
-        $("[data-test-id='date'] input").setValue(planningDay);
+        $("[data-test-id='date'] input").doubleClick().press(Keys.DELETE).setValue(planningDay);
         $("[data-test-id='name'] input").setValue("Павлов Антон");
         $("[data-test-id='phone'] input").setValue("+75412369852");
         $("[data-test-id='agreement']").click();
